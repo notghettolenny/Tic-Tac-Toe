@@ -1,0 +1,225 @@
+.gameboard.container {
+  margin: 2.4rem auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.turn-indicator {
+  background: var(--semi-dark-navy);
+  box-shadow: inset 0px -4px 0px #10212a;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.9rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: center;
+  letter-spacing: 0.875px;
+  color: var(--silver);
+  padding: 0.9rem 1.5rem 1.4rem;
+  width: fit-content;
+  margin-right: 3rem;
+}
+
+.restart-btn {
+  background: var(--silver);
+  box-shadow: inset 0px -4px 0px #6b8997;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restart-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 96px);
+  gap: 2rem;
+  margin-top: 6.4rem;
+}
+
+.board-space {
+  background-color: var(--semi-dark-navy);
+  background-repeat: no-repeat;
+  background-position: center 24px;
+  background-size: 40px 40px;
+  box-shadow: inset 0px -8px 0px #10212a;
+  border-radius: 10px;
+}
+
+.board-space.x-space {
+  background-image: url("../assets/icon-x.svg");
+}
+
+.board-space.x-space.winning-play {
+  background-image: url("../assets/icon-x-dark.svg");
+  background-color: var(--light-blue);
+  box-shadow: inset 0px -8px 0px #118c87;
+}
+
+.board-space.o-space {
+  background-image: url("../assets/icon-o.svg");
+}
+
+.board-space.o-space.winning-play {
+  background-image: url("../assets/icon-o-dark.svg");
+  background-color: var(--light-yellow);
+  box-shadow: inset 0px -8px 0px #cc8b13;
+}
+
+.score-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.score {
+  padding: 1.2rem;
+  border-radius: 10px;
+  flex: 1;
+  text-align: center;
+  color: var(--dark-navy);
+}
+
+.score.player-x {
+  background: var(--light-blue);
+}
+
+.score.ties {
+  background: var(--silver);
+}
+
+.score.player-o {
+  background: var(--light-yellow);
+}
+
+.score-heading {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.875px;
+}
+
+.score-value {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 1.25px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 500px) {
+  .gameboard.container {
+    margin: 20.1rem auto 20rem;
+  }
+
+  .header {
+    width: 457px;
+    margin: 0 auto;
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  .header .logo {
+    margin-right: auto;
+  }
+
+  .turn-indicator {
+    border-radius: 10px;
+    gap: 1.3rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    padding: 1.3rem 3rem 1.9rem;
+    margin-right: 10.6rem;
+  }
+
+  .turn-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .restart-btn {
+    border-radius: 10px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .restart-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .game-grid {
+    grid-template-rows: repeat(3, 140px);
+    margin-top: 1.9rem;
+  }
+
+  .board-space {
+    background-position: center 38px;
+    background-size: 64px 64px;
+    border-radius: 15px;
+  }
+
+  .score-wrapper {
+    margin-top: 1.9rem;
+  }
+
+  .score {
+    padding: 1.3rem 1.3rem 1.1rem;
+    border-radius: 15px;
+  }
+
+  .score-value {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media screen and (min-width: 1028px) {
+  .gameboard.container {
+    margin: 13.9rem auto 13.8rem;
+  }
+
+  .restart-btn:hover {
+    cursor: pointer;
+    background: var(--silver-hover);
+  }
+
+  .board-space:hover:enabled {
+    cursor: pointer;
+  }
+
+  .x-turn .board-space:hover:enabled {
+    background-image: url("../assets/icon-x-outline.svg");
+  }
+
+  .o-turn .board-space:hover:enabled {
+    background-image: url("../assets/icon-o-outline.svg");
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .turn-indicator {
+    margin-right: 0;
+  }
+}

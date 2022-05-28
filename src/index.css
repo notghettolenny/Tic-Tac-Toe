@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap");
+
+:root {
+  --font: "Outfit", sans-serif;
+  --dark-navy: hsl(202, 32%, 15%);
+  --semi-dark-navy: hsl(199, 35%, 19%);
+  --silver: hsl(198, 23%, 72%);
+  --silver-hover: hsl(197, 33%, 89%);
+  --light-blue: hsl(178, 60%, 48%);
+  --light-blue-hover: hsl(178, 75%, 65%);
+  --light-blue-shadow: #118c87;
+  --light-yellow: hsl(39, 88%, 58%);
+  --light-yellow-hover: hsl(39, 100%, 69%);
+  --light-yellow-shadow: #cc8b13;
+  --black-transparent: hsla(0, 0%, 0%, 0.5);
+  --label-hover: rgba(168, 191, 201, 0.05);
+}
+
+/* CSS Reset */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--dark-navy);
+  font-family: var(--font);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+/* Shared Styles */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.container {
+  width: min(87.46667%, 328px);
+}
+
+/* Media Queries */
+@media screen and (min-width: 500px) {
+  .container {
+    width: 460px;
+  }
+}
